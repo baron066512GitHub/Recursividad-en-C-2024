@@ -47,13 +47,13 @@ void fibo_i(int vec[max], int i){
 
 void fibo_i2(int vec[max],int i){
     if( i != 0 && vec[i] == 0 ){
-        printf("%d ", fibo(vec[i]));
-        fibo_i(vec,i-1);
+        printf("%d\n", fibo(vec[i]));
+        fibo_i2(vec,i-1);
     }else if(vec[i] == 0){
-        printf("%d \n", fibo(vec[i]));
+        printf("%d ", fibo(vec[i]));
     }else{
        printf("%d ", fibo(vec[i]));
        vec[i]--;
-       fibo_i(vec,i);
+       fibo_i2(vec,i);
     }
 }
